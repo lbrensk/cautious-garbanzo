@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage{natbib}
+
+\begin{document}
+
+\title{Chronometric Extension Paper}
+\author{Laura Brenskelle}
+\date{2018-6-29}
+
+\maketitle
+
+\bibliographystyle{te}
+
+\bibliography{ref.bib}
+
+\section{Introduction}
+This document illustrates the use of BibTeX\@.  You may want to refer to
+\cite{ahu61} or \cite{ab94} or \cite{m85}.  Or you may want to cite a
+specific page in a reference, like this: see \citet[p.~199]{m85}.  Or
+perhaps you want to cite more than one paper by Maskin: \cite{m85, m99}.
+Or you want to make a parenthetical reference to one or more articles, in which case the \verb+\citealt+ command omits the parentheses around the year (\citealt{ahu61}).
+
+Authors:
+Laura Brenskelle
+John Wieczorek
+Michelle LeFebvre
+Neill Wallis
+Kitty Emery
+Rob Guralnick
+
+The temporal context of paleo-biodiversity occurrences is essential to their value and use in research (REF CITE).  However, in repositories such as VertNet, iDigBio, and GBIF, there are currently only limited capabilities to discover or search for these occurrences based on their age.  This is due in part to the lack of data standardization and reporting that enables discoverability about absolute age.  The Darwin Core data standard, which is used for sharing biodiversity information, does have fields for geologicalContext, which are inherently tied to chronology [@wieczorekdarwin].  The geological context of a specimen is valuable information, but the ages associated with these contexts shift, much like phylogenetic relationships, depending on current knowledge.  Additionally, in disciplines such as archaeology, these terms are not applicable, but there is still a critical need to report temporality (REF CITE).  At present, if these data are reported at all, they are captured in various free-text Darwin Core fields, such as dwc:identificationRemarks, dwc:lithostratigraphicTerms, locality, and dwc:dynamicProperties in non-standard ways, which makes it extremely difficult for users to find them.
+The definition for the Darwin Core field eventDate is “The date-time or interval during which an Event occurred.”  The definition goes on to explain that “this is the date-time when the event was recorded” and that this field is “not suitable for a time in a geological context.”  For modern biological occurrences, it seems clear that this event is when the specimen was collected, which is contemporaneous with when the organism was alive within its habitat.  However, for occurrences from deep time, it is unclear whether the ‘event’ mentioned in this definition is the collection date of a specimen or when this organism was alive within its context.  This is an important distinction for archaeological and paleontological specimens where these two events are disjoint.  As demonstrated herein, the field dwc:eventDate has been used across the paleontological and archaeological collections communities to report collecting date.  Not only could this be a source of confusion when these occurrence records are intermixed with modern biological ones, but it also means that dwc:eventDate is not currently an appropriate place for reporting information about the temporality of a specimen.  Consequently, there are no dedicated fields in existing standards for describing what is known about a chronometric age of a specimen [@macfaddenhorses].
+In order to  better   provide needed information about absolute age of specimens and to facilitate search functions by chronometric age, we have developed an extension to the Darwin Core standard (@wieczorekdarwin) for reporting what is known about the temporal context of specimens, whether it is from relative or absolute dating methods, or age models that have been created about particular sites.  Extensions to Darwin Core are not part of the core standard; they are optional packages of terms that can be recorded to reflect additional information (REF CITE) [@droege2013; @endresen2012]. In the particular case of the chronometric extension, this is an advantage to its usage because, unlike the core terms, Darwin Core extensions allow for one to many relationships with occurrences.  This means that multiple ages can be reported for a specimen if multiple dating assays have been performed, or if what is known about the age of a specimen is the summation of multiple relative dates.  The chronometric extension was also developed to be flexible enough to accommodate legacy data common in collections where not much may be known about the provenance of the reported date.  At its simplest, our goal in the development of the chronometric extension was to enable the dissemination of what is know about temporal context of a specimen and where this information comes from.  With access to this information, users can decide for themselves whether or not a reported absolute age for a specimen is scientifically sound.
+We developed the extension as part of our work to mobilize zooarchaeological specimen data from the Florida Museum of Natural History and integrate it with existing digital biodiversity occurrence data (LeFebvre et al. submitted).  To date, we have published four exemplar datasets from Florida archaeological sites that each showcase the flexibility of the chronometric extension in a different way.  Here we first provide a detailed empirical assessment of how absolute age is currently reported in repositories, focusing on published paleontological and archaeological resources.  We introduce the chronometry extension to the Darwin Core, focusing on the terms proposed for the extension, and detailing choices made in the development of the extension.  We then provide concrete examples of use of the chronometry extension for both archaeological and paleontological specimens.  We close with a look towards the future of integrating across resources and assuring that chronometric data is shared across repositories as best as possible.
+
+\end{document}
