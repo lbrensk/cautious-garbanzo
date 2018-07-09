@@ -1,9 +1,21 @@
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Term       | Definitions         | Notes about the Term   |
+| ------------- |:-------------:| -------------:|
+| chronometricDate | The age of a specimen or related materials that is generated from a dating assay. | |
+| chronometricDateID | An identifier for the set of information associated with a ChronometricDate. | May be a global unique identifier or an identifier specific to the data set. |
+| verbatimChronometricAge | The verbatim age for a specimen, whether reported by a dating assay, associated references, or legacy information. | For example, this could be the conventional radiocarbon age as given in an AMS dating report. This could also be simply what is reported as the age of a specimen in legacy collections data. |
+| verbatimChronometricAgeConversionProtocol | The method used for converting the verbatimChronometricAge into a chronometric date in years, as captured in the maximumChronometricAge, maximumChronometricAgeReferenceSystem, minimumChronometricAge, and minimumChronometricAgeReferenceSystem fields. | For example, calibration of conventional radiocarbon age or the currently accepted age range of a cultural or geological period. |
+| maximumChronometricAge | Upper limit for the age of a specimen as determined by a dating method. | |
+| maximumChronometricAgeReferenceSystem | The reference system associated with the maximumChronometricAge. | For example, BC. It is understood already that this field has the unit of years. |
+| minimumChronometricAge | Lower limit for the age of a specimen as determined by a dating method. |
+| minimumChronometricAgeReferenceSystem | The reference system associated with the minimumChronometricAge. | For example, AD. It is understood already that this field has the unit of years. |
+| chronometricAgeUncertaintyInYears | The temporal uncertainty of the maximumAge and minimumAge, in years. | |
+| chronometricAgeUncertaintyMethod | The method used to generate the reported uncertainty calculations. | |
+| materialDated | A description of the material on which the chronometricDateProtocol was actually performed, if known. | |
+| materialDatedID | An identifier for the material on which the chronometricDateProtocol was performed, if applicable. | |
+| chronometricDateProtocol | A description or reference to the methods used to determine the ChronometricDate. | |
+| chronometricDateReferences | A list (concatenated and separated) of identifiers (publication, bibliographic reference, global unique identifier, URI) of literature associated with the ChronometricDate. | |
+| chronometricDateRemarks | Notes or comments about the ChronometricDate. | |
 
 # Download the necessary tools
 ***Please download these BEFORE attending the workshop on May 8. If you have problems, you may contact me via lbrensk@ufl.edu with questions.***
